@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>توزیع‌کنندگان | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">شبکه پخش</p>
+          <h1>توزیع‌کنندگان</h1>
+          <p>مدیریت نمایندگان و شرکای توزیع محصولات.</p>
+        </div>
+        <button class="button primary" onclick="history.back()">بازگشت</button>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><h2>توزیع‌کنندگان فعال</h2></div>
+        <table>
+          <thead>
+            <tr>
+              <th>نام شرکت</th>
+              <th>منطقه</th>
+              <th>تلفن</th>
+              <th>وضعیت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>پخش نیک</td>
+              <td>کابل و پروان</td>
+              <td>۰۲۰-۴۴۵۵۰۰۱۰</td>
+              <td><span class="status green">فعال</span></td>
+            </tr>
+            <tr>
+              <td>پخش سپهر</td>
+              <td>هرات و فراه</td>
+              <td>۰۴۰-۳۲۲۱۰۰۲۰</td>
+              <td><span class="status green">فعال</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script>
+      SuperColaAuth.requirePage();
+    </script>
+  </body>
+</html>

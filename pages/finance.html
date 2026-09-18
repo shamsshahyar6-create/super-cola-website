@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>مالی | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">مدیریت مالی</p>
+          <h1>امور مالی</h1>
+          <p>دریافت‌ها، پرداخت‌ها و گردش مالی شرکت به افغانی.</p>
+        </div>
+        <button class="button primary" onclick="history.back()">بازگشت</button>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><h2>خلاصه مالی ماه جاری</h2></div>
+        <table>
+          <thead>
+            <tr>
+              <th>عنوان</th>
+              <th>مبلغ</th>
+              <th>وضعیت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>فروش ناخالص</td>
+              <td>۸۴۵,۲۰۰,۰۰۰ افغانی</td>
+              <td><span class="status green">ثبت شده</span></td>
+            </tr>
+            <tr>
+              <td>دریافت‌شده</td>
+              <td>۶۹۰,۵۰۰,۰۰۰ افغانی</td>
+              <td><span class="status green">تکمیل</span></td>
+            </tr>
+            <tr>
+              <td>مطالبات باقی‌مانده</td>
+              <td>۱۵۴,۷۰۰,۰۰۰ افغانی</td>
+              <td><span class="status orange">پیگیری لازم</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script>
+      SuperColaAuth.requirePage();
+    </script>
+  </body>
+</html>

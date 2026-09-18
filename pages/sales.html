@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>فروش | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">عملیات فروش</p>
+          <h1>فروش</h1>
+          <p>عملکرد تیم فروش و هدف‌های دوره‌ای.</p>
+        </div>
+        <button class="button primary" onclick="history.back()">بازگشت</button>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><h2>عملکرد فروشندگان</h2></div>
+        <table>
+          <thead>
+            <tr>
+              <th>فروشنده</th>
+              <th>هدف ماهانه</th>
+              <th>فروش ثبت‌شده</th>
+              <th>وضعیت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>رضا کریمی</td>
+              <td>۳۰۰ میلیون افغانی</td>
+              <td>۲۴۸ میلیون افغانی</td>
+              <td><span class="status orange">در حال پیشرفت</span></td>
+            </tr>
+            <tr>
+              <td>مریم اکبری</td>
+              <td>۲۵۰ میلیون افغانی</td>
+              <td>۲۷۰ میلیون افغانی</td>
+              <td><span class="status green">هدف محقق شد</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script>
+      SuperColaAuth.requirePage();
+    </script>
+  </body>
+</html>

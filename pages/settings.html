@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>تنظیمات سیستم | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark">س</div>
+          <div>
+            <strong>سوپرکولا</strong>
+            <small>سیستم مدیریت شرکت</small>
+          </div>
+        </div>
+        <div class="sidebar-label">مدیریت سیستم</div>
+        <nav class="nav-list">
+          <a class="nav-item" data-page="dashboard.html">▦ داشبورد</a>
+          <a class="nav-item" data-page="orders.html">▤ سفارش‌ها</a>
+          <a class="nav-item" data-page="products.html">◫ محصولات</a>
+          <a class="nav-item" data-page="customers.html">♙ مشتریان</a>
+          <a class="nav-item" data-page="warehouse.html">▥ انبار</a>
+          <a class="nav-item" data-page="reports.html">▥ گزارش‌ها</a>
+          <a class="nav-item" data-page="settings.html">⚙ تنظیمات</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-avatar">م</div>
+          <div>
+            <strong id="userName">کاربر</strong>
+            <small id="userRole">کارمند</small>
+          </div>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <button class="icon-button" id="menuButton">☰</button>
+            خانه /
+            <strong>تنظیمات سیستم</strong>
+          </div>
+          <button class="icon-button" id="logoutButton">↪</button>
+        </header>
+        <section class="page-container">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">دسترسی مدیر کل</p>
+              <h1>تنظیمات سیستم</h1>
+              <p>
+                مدیر کل می‌تواند حساب‌ها، دسترسی‌ها و تنظیمات عمومی شرکت را
+                مدیریت کند.
+              </p>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>حساب مدیر کل</h2>
+                <p>تنظیمات حساب کاربری</p>
+              </div>
+            </div>
+            <form class="form">
+              <label>
+                نام نمایشی
+                <input value="علی رضایی" />
+              </label>
+              <label>
+                ایمیل
+                <input type="email" value="admin@supercola.af" />
+              </label>
+              <label>
+                شماره تماس
+                <input value="+93 700 000 000" />
+              </label>
+              <button class="button primary" type="button">
+                ذخیره تغییرات
+              </button>
+            </form>
+          </div>
+          <br />
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>حساب‌های کارمندان و سطح دسترسی</h2>
+                <p>هر کارمند فقط به بخش مرتبط با مسؤولیت خود دسترسی دارد.</p>
+              </div>
+              <a class="button primary" href="users.html">＋ کارمند جدید</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>نام</th>
+                  <th>شناسه</th>
+                  <th>مسؤولیت</th>
+                  <th>دسترسی</th>
+                  <th>وضعیت</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>مریم احمدی</td>
+                  <td>warehouse</td>
+                  <td>مسؤول انبار</td>
+                  <td>انبار</td>
+                  <td><span class="status green">فعال</span></td>
+                </tr>
+                <tr>
+                  <td>رضا کریمی</td>
+                  <td>sales</td>
+                  <td>کارشناس فروش</td>
+                  <td>سفارش‌ها</td>
+                  <td><span class="status green">فعال</span></td>
+                </tr>
+                <tr>
+                  <td>سارا محمدی</td>
+                  <td>finance</td>
+                  <td>مسؤول مالی</td>
+                  <td>گزارش‌ها</td>
+                  <td><span class="status green">فعال</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
+          <div class="panel">
+            <div class="panel-header"><h2>تنظیمات عمومی شرکت</h2></div>
+            <form class="form">
+              <label>
+                نام شرکت
+                <input value="شرکت تولیدی سوپرکولا افغانستان" />
+              </label>
+              <label>
+                واحد پول
+                <select>
+                  <option>افغانی</option>
+                  <option>دالر امریکایی</option>
+                </select>
+              </label>
+              <label>
+                منطقه زمانی
+                <select>
+                  <option>افغانستان - کابل</option>
+                </select>
+              </label>
+              <button class="button primary" type="button">
+                ذخیره تنظیمات سیستم
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/app-shell.js"></script>
+  </body>
+</html>

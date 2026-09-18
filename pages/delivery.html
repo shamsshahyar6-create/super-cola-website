@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ارسال و توزیع | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">زنجیره توزیع</p>
+          <h1>ارسال و توزیع</h1>
+          <p>پیگیری موترها و سفارش‌های در مسیر ارسال.</p>
+        </div>
+        <button class="button primary" onclick="history.back()">بازگشت</button>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><h2>ارسال‌های امروز</h2></div>
+        <table>
+          <thead>
+            <tr>
+              <th>مسیر</th>
+              <th>راننده</th>
+              <th>تعداد سفارش</th>
+              <th>وضعیت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ناحیه شمال</td>
+              <td>حسن مرادی</td>
+              <td>۱۲ سفارش</td>
+              <td><span class="status orange">در مسیر</span></td>
+            </tr>
+            <tr>
+              <td>ناحیه مرکز</td>
+              <td>امیر نادری</td>
+              <td>۹ سفارش</td>
+              <td><span class="status green">تکمیل شده</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script>
+      SuperColaAuth.requirePage();
+    </script>
+  </body>
+</html>

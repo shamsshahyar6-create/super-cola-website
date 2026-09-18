@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>کارمندان | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">منابع بشری</p>
+          <h1>کارمندان</h1>
+          <p>کاربران سیستم و سطح دسترسی هر نقش.</p>
+        </div>
+        <button class="button primary" onclick="history.back()">بازگشت</button>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><h2>کاربران سیستم</h2></div>
+        <table>
+          <thead>
+            <tr>
+              <th>نام</th>
+              <th>شناسه ورود</th>
+              <th>مسؤولیت</th>
+              <th>دسترسی</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>علی رضایی</td>
+              <td>admin</td>
+              <td>مدیر کل</td>
+              <td>همه بخش‌ها</td>
+            </tr>
+            <tr>
+              <td>مریم احمدی</td>
+              <td>warehouse</td>
+              <td>مسؤول انبار</td>
+              <td>انبار</td>
+            </tr>
+            <tr>
+              <td>رضا کریمی</td>
+              <td>sales</td>
+              <td>کارشناس فروش</td>
+              <td>سفارش‌ها</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script>
+      SuperColaAuth.requirePage();
+    </script>
+  </body>
+</html>

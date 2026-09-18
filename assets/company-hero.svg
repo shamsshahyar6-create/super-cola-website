@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc">
+  <title id="title">نوشابه سوپرکولا</title>
+  <desc id="desc">بوتل نوشابه سوپرکولا و یک قوطی نوشیدنی خنک</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#064b86"/><stop offset=".58" stop-color="#129fbd"/><stop offset="1" stop-color="#9de5d3"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="0" x2="1">
+      <stop stop-color="#850b2f"/><stop offset=".48" stop-color="#ef174c"/><stop offset="1" stop-color="#970b35"/>
+    </linearGradient>
+    <linearGradient id="can" x1="0" x2="1">
+      <stop stop-color="#b80b39"/><stop offset=".5" stop-color="#f32a5a"/><stop offset="1" stop-color="#940a32"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#05395b" flood-opacity=".4"/>
+    </filter>
+    <radialGradient id="bubble"><stop stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1000" height="420" rx="26" fill="url(#bg)"/>
+  <circle cx="90" cy="80" r="86" fill="#fff" opacity=".08"/>
+  <circle cx="910" cy="70" r="50" fill="#fff" opacity=".15"/>
+  <g fill="url(#bubble)">
+    <circle cx="90" cy="260" r="26"/><circle cx="150" cy="120" r="12"/>
+    <circle cx="820" cy="110" r="18"/><circle cx="900" cy="260" r="12"/>
+    <circle cx="735" cy="70" r="7"/><circle cx="275" cy="310" r="9"/>
+  </g>
+  <path fill="#b8f0e5" opacity=".36" d="M0 315c110-45 180-12 275-42 100-31 164-7 250-38 102-36 180 9 253-19 90-35 147-8 222-39v243H0z"/>
+  <g fill="#fff" font-family="Tahoma,Arial,sans-serif">
+    <text x="70" y="132" font-size="42" font-weight="700">یک جرعه تازگی</text>
+    <text x="72" y="174" font-size="21" opacity=".94">سوپرکولا؛ طعم محبوب شما</text>
+    <text x="72" y="210" font-size="16" opacity=".82">خنک، خوش‌طعم و تازه</text>
+  </g>
+  <path fill="#ec1749" d="M72 232h190l-18 8H72z"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(545 56)">
+      <path fill="#e4f7f5" d="M54 0h62v48H54z"/>
+      <path fill="#d3eeed" d="M47 2c0-17 76-17 76 0v11H47z"/>
+      <path fill="url(#bottle)" d="M37 39h95l25 285H8z"/>
+      <path fill="#fff" opacity=".95" d="M16 126c39-23 83-23 122 0v99c-39 21-83 21-122 0z"/>
+      <path fill="#d91849" d="M18 139c38-19 80-19 118 0v75c-38 18-80 18-118 0z"/>
+      <text x="77" y="190" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="28" font-weight="700">Super</text>
+      <text x="77" y="220" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">Cola</text>
+      <path fill="#fff" opacity=".2" d="M24 260c35 11 70 11 105 0v20c-35 10-70 10-105 0z"/>
+    </g>
+    <g transform="translate(735 155) rotate(7)">
+      <path fill="#dceceb" d="M28 0h57v27H28z"/>
+      <ellipse cx="56" cy="28" rx="30" ry="7" fill="#cad9d9"/>
+      <path fill="url(#can)" d="M14 28h84l13 178H0z"/>
+      <ellipse cx="56" cy="28" rx="30" ry="6" fill="#aabdc1"/>
+      <circle cx="56" cy="104" r="31" fill="#fff"/>
+      <text x="56" y="111" text-anchor="middle" fill="#d91849" font-family="Arial,sans-serif" font-size="18" font-weight="700">SC</text>
+    </g>
+  </g>
+  <g fill="#fff" opacity=".9">
+    <path d="M490 355h110l-20 28H510z"/><path d="M690 350h95l-18 30h-60z"/>
+    <circle cx="470" cy="352" r="8"/><circle cx="805" cy="340" r="7"/>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ورود به سوپرکولا</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="login-page">
+    <main class="login-card">
+      <div class="brand centered">
+        <img
+          class="brand-logo"
+          src="assets/super-cola-logo.svg"
+          alt="لوگوی سوپرکولا"
+        />
+      </div>
+      <h1>ورود به حساب کاربری</h1>
+      <p class="muted">برای ادامه، نام کاربر و رمز ورود خود را وارد کنید.</p>
+      <form id="loginForm" class="form">
+        <label>
+          نام کاربر
+          <input
+            name="id"
+            required
+            autocomplete="username"
+            placeholder="نام کاربر"
+          />
+        </label>
+        <label>
+          رمز ورود
+          <input
+            name="password"
+            required
+            type="password"
+            autocomplete="current-password"
+            placeholder="رمز ورود"
+          />
+        </label>
+        <p class="error" id="loginError"></p>
+        <button class="button primary full" type="submit">ورود به سیستم</button>
+      </form>
+    </main>
+    <script src="js/auth.js"></script>
+    <script>
+      document
+        .querySelector("#loginForm")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          const data = new FormData(event.currentTarget);
+          const session = SuperColaAuth.login(
+            data.get("id").trim(),
+            data.get("password"),
+          );
+          if (!session) {
+            document.querySelector("#loginError").textContent =
+              "نام کاربر یا رمز ورود درست نیست.";
+            return;
+          }
+          window.location.href =
+            session.page === "index.html" ? "index.html?login=1" : session.page;
+        });
+    </script>
+  </body>
+</html>

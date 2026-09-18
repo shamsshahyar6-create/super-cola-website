@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>کاربران و نقش‌ها | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">امنیت سیستم</p>
+          <h1>کاربران و نقش‌ها</h1>
+          <p>مدیر کل می‌تواند کاربران را اضافه، فعال یا غیرفعال کند.</p>
+        </div>
+        <button class="button primary" data-action="back">بازگشت</button>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <h2>حساب‌های سیستم</h2>
+          <button class="button primary" id="newUserButton">
+            ＋ کارمند جدید
+          </button>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>نام کاربر</th>
+                <th>شناسه</th>
+                <th>نقش</th>
+                <th>دسترسی</th>
+                <th>وضعیت</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody id="usersRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <div class="modal-backdrop" id="userModal">
+      <section class="modal">
+        <div class="modal-head">
+          <div>
+            <h2>افزودن کارمند جدید</h2>
+            <p>حساب و مسؤولیت کارمند را تعیین کنید.</p>
+          </div>
+          <button class="icon-button" id="closeUserModal" type="button">
+            ×
+          </button>
+        </div>
+        <form class="form" id="userForm">
+          <label>
+            نام و تخلص
+            <input name="name" required />
+          </label>
+          <label>
+            نام کاربر
+            <input
+              name="id"
+              required
+              pattern="[A-Za-z0-9_\-]{3,30}"
+              placeholder="مثلاً ahmad_01"
+            />
+          </label>
+          <label>
+            رمز ورود
+            <input name="password" required minlength="4" type="password" />
+          </label>
+          <label>
+            نقش
+            <select name="role" required>
+              <option value="مسؤول انبار">مسؤول انبار</option>
+              <option value="کارشناس فروش">کارشناس فروش</option>
+              <option value="مسؤول مالی">مسؤول مالی</option>
+              <option value="پشتیبانی مشتریان">پشتیبانی مشتریان</option>
+            </select>
+          </label>
+          <button class="button primary" type="submit">ذخیره کارمند</button>
+        </form>
+      </section>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/app-shell.js"></script>
+    <script src="../js/users.js"></script>
+    <script src="../js/page-runtime.js"></script>
+  </body>
+</html>

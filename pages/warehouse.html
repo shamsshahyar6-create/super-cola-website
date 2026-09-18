@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>انبار | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark">س</div>
+          <div>
+            <strong>سوپرکولا</strong>
+            <small>سیستم مدیریت شرکت</small>
+          </div>
+        </div>
+        <div class="sidebar-label">مدیریت سیستم</div>
+        <nav class="nav-list">
+          <a class="nav-item" data-page="dashboard.html">▦ داشبورد</a>
+          <a class="nav-item" data-page="orders.html">▤ سفارش‌ها</a>
+          <a class="nav-item" data-page="products.html">◫ محصولات</a>
+          <a class="nav-item" data-page="customers.html">♙ مشتریان</a>
+          <a class="nav-item active" data-page="warehouse.html">▥ انبار</a>
+          <a class="nav-item" data-page="reports.html">▥ گزارش‌ها</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="user-avatar">م</div>
+          <div>
+            <strong id="userName">کاربر</strong>
+            <small id="userRole">کارمند</small>
+          </div>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <button class="icon-button" id="menuButton">☰</button>
+            خانه /
+            <strong>انبار</strong>
+          </div>
+          <button class="icon-button" id="logoutButton">↪</button>
+        </header>
+        <section class="page-container">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">مدیریت موجودی</p>
+              <h1>انبار</h1>
+              <p>موجودی کالاها و هشدارهای انبار را مدیریت کنید.</p>
+            </div>
+            <button class="button primary" id="newStockButton">
+              ＋ ثبت ورود کالا
+            </button>
+          </div>
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>موجودی کالاها</h2>
+                <p>جست‌وجوی لحظه‌ای در موجودی انبار</p>
+              </div>
+              <input
+                class="button secondary"
+                id="warehouseSearch"
+                placeholder="جست‌وجوی کالا"
+              />
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>کد کالا</th>
+                    <th>نام محصول</th>
+                    <th>دسته‌بندی</th>
+                    <th>موجودی</th>
+                    <th>حد سفارش</th>
+                    <th>وضعیت</th>
+                  </tr>
+                </thead>
+                <tbody id="warehouseRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="stockModal">
+      <section class="modal">
+        <div class="modal-head">
+          <div>
+            <h2>ثبت ورود کالا</h2>
+            <p>ورود موجودی به انبار را ثبت کنید.</p>
+          </div>
+          <button class="icon-button" id="closeStockModal" type="button">
+            ×
+          </button>
+        </div>
+        <form class="form" id="stockForm">
+          <label>
+            محصول
+            <select name="product" required id="stockProduct"></select>
+          </label>
+          <label>
+            تعداد کارتن
+            <input name="quantity" required type="number" min="1" />
+          </label>
+          <label>
+            دلیل ورود
+            <input
+              name="reason"
+              required
+              placeholder="خرید، تولید یا برگشت کالا"
+            />
+          </label>
+          <button class="button primary" type="submit">ثبت ورود کالا</button>
+        </form>
+      </section>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/app-shell.js"></script>
+    <script src="../js/data-store.js"></script>
+    <script src="../js/warehouse.js"></script>
+    <script src="../js/warehouse-entry.js"></script>
+    <script>
+      document.querySelector("#stockProduct").innerHTML = SuperColaStore.read(
+        "products",
+      )
+        .map((item) => `<option value="${item.code}">${item.name}</option>`)
+        .join("");
+    </script>
+  </body>
+</html>

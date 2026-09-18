@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>حاضری | سوپرکولا</title>
+    <link rel="stylesheet" href="../css/app.css" />
+  </head>
+  <body>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">منابع بشری</p>
+          <h1>حاضری کارمندان</h1>
+          <p>ثبت ورود، خروج، تأخیر و اضافه‌کاری کارمندان.</p>
+        </div>
+        <button class="button primary" data-action="back">بازگشت</button>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <h2>حاضری امروز</h2>
+          <button class="button secondary">＋ ثبت حاضری</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>کارمند</th>
+              <th>شیفت</th>
+              <th>ورود</th>
+              <th>خروج</th>
+              <th>اضافه‌کاری</th>
+              <th>وضعیت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>مریم احمدی</td>
+              <td>صبح</td>
+              <td>۰۷:۵۸</td>
+              <td>۱۶:۰۰</td>
+              <td>۰</td>
+              <td><span class="status green">حاضر</span></td>
+            </tr>
+            <tr>
+              <td>رضا کریمی</td>
+              <td>صبح</td>
+              <td>۰۸:۲۳</td>
+              <td>۱۶:۰۰</td>
+              <td>۳۰ دقیقه</td>
+              <td><span class="status orange">تأخیر</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="../js/auth.js"></script>
+    <script src="../js/app-shell.js"></script>
+    <script src="../js/page-runtime.js"></script>
+  </body>
+</html>
